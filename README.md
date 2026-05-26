@@ -30,9 +30,9 @@ Open [http://localhost:5173](http://localhost:5173)
 ```
 portfolio/
 ├── public/
-│   ├── profile.jpg          ← Add your photo here
-│   ├── resume.pdf           ← Add your resume here
-│   └── projects/            ← Add project screenshots here
+│   ├── profile.jpg         
+│   ├── resume.pdf           
+│   └── projects/           
 ├── src/
 │   ├── components/
 │   │   ├── Navbar.jsx
@@ -56,32 +56,6 @@ portfolio/
 └── package.json
 ```
 
-## 🎨 Personalising
-
-### 1. Add your photo
-Drop `profile.jpg` into `/public/`. The Hero section will use it automatically.
-
-### 2. Add your resume
-Drop `resume.pdf` into `/public/`.
-
-### 3. Update content
-- **Hero** — edit `src/sections/Hero.jsx` for your tagline
-- **About** — edit facts and bio in `src/sections/About.jsx`
-- **Skills** — add/remove skills in `src/sections/Skills.jsx`
-- **Projects** — update the `PROJECTS` array in `src/sections/Projects.jsx`
-- **Certifications** — update the `CERTS` array in `src/sections/Certifications.jsx`
-- **Contact** — update your email and social links in `src/sections/Contact.jsx`
-
-### 4. Wire up the contact form
-In `Contact.jsx`, replace the `setTimeout` mock with:
-- **[Formspree](https://formspree.io/)** — free, no backend needed
-- **[EmailJS](https://www.emailjs.com/)** — send directly from JS
-
-### 5. Deploy
-```bash
-npm run build       # Outputs to /dist
-# Deploy /dist to Vercel, Netlify, or GitHub Pages
-```
 
 ## 🛠 Tech Stack
 
