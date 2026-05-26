@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    cursor: none !important;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-blush-50 text-slate-800 font-sans antialiased overflow-x-hidden;
+  }
+
+  ::selection {
+    background-color: #f3b8cc;
+    color: #7a2843;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #fff5f8;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #f3b8cc;
+    border-radius: 10px;
+  }
+}
+
+@layer components {
+  /* Glass card base */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 32px rgba(200, 100, 140, 0.1);
+  }
+
+  .glass-card-dark {
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+  }
+
+  /* Gradient text */
+  .text-gradient {
+    background: linear-gradient(135deg, #c45778 0%, #9b82cc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Section label */
+  .section-label {
+    @apply text-xs tracking-[0.18em] uppercase text-lavender-600 font-medium mb-2;
+  }
+
+  /* Section heading */
+  .section-heading {
+    @apply font-serif text-4xl md:text-5xl font-medium text-slate-800 leading-tight mb-12;
+  }
+
+  /* Pill tag */
+  .pill {
+    @apply inline-flex items-center gap-1.5 text-xs font-medium tracking-wide 
+           px-3 py-1 rounded-full 
+           bg-blush-100 border border-blush-200 text-blush-700;
+  }
+
+  /* Tech badge */
+  .tech-badge {
+    @apply text-xs font-medium px-3 py-1 rounded-full 
+           bg-gradient-to-r from-blush-100 to-lavender-100 
+           border border-blush-200 text-blush-800;
+  }
+
+  /* Button primary */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-7 py-3.5 
+           rounded-full font-medium text-sm text-white
+           bg-gradient-to-r from-blush-500 to-blush-700
+           shadow-pink hover:shadow-pink-hover
+           transition-all duration-300 hover:-translate-y-0.5 active:scale-95;
+  }
+
+  /* Button outline */
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-7 py-3.5 
+           rounded-full font-medium text-sm text-blush-700
+           border-[1.5px] border-blush-300
+           hover:bg-blush-100 hover:border-blush-400
+           transition-all duration-300 hover:-translate-y-0.5 active:scale-95;
+  }
+}
+
+@layer utilities {
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+
+  /* Morphing blob utility */
+  .blob-shape {
+    border-radius: 42% 58% 60% 40% / 50% 44% 56% 50%;
+    animation: morph 8s ease-in-out infinite;
+  }
+}
